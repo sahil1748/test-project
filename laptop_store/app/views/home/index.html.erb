@@ -1,0 +1,13 @@
+<body>
+
+  <h1>Home#index</h1>
+  <p>Find me in app/views/home/index.html.erb</p>
+
+  <% @ar.each do |el| %>
+    <li><%= el %></li>
+  <% end %>
+  <div>
+  	<!--a href="http://localhost:3000/users/new">create new user</a--->
+	<%= link_to "Create User", new_user_path%>  	
+  </div>
+</body>

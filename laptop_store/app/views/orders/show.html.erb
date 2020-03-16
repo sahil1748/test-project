@@ -1,0 +1,32 @@
+<head>
+	
+</head>
+
+<body>
+  <% if @order_exists %>
+    <table>
+      <th>
+        <td>ID</td>
+        <td>Placed on</td>
+        <td>Status</td>
+      </th>
+      <% @orders.each do |order| %>
+        <tr>
+          <td>
+        	<%= order.id %>	
+          </td>
+          <td>
+        	<%= (order.created_at).to_date %>
+          </td>
+          <td>
+        	<%= order.payment_status %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <h3>
+      You have no recent orders. 	
+    </h3>
+  <% end %>
+</body>

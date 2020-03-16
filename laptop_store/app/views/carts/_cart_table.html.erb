@@ -1,0 +1,25 @@
+
+<% if @products && @products.length > 0 %>  
+  <table>
+    <thead>
+  	  <th>name</th>
+  	  <th>price</th>
+  	  <th>quantity</th>
+    </thead>
+    <tbody>
+  	  <% @products.each do |product| %>
+  	    <tr>
+  	      <td><%= product['name'] %></td>
+  	      <td><%= product['price'] %></td>
+  	      <td><%= product['quantity'] %></td>
+          <td class="delete_button">remove item</td>
+  	    </tr>
+  	  <% end %>
+
+    </tbody>
+  </table>
+<% else %>
+  <div>
+    <h3>CART EMPTY</h3>
+  </div>
+<% end %>

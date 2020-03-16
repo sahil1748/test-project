@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ram: MyString
+  hdd: MyString
+  processor: MyString
+  os: MyString
+  screen: MyString
+  color: MyString
+  weight: MyString
+
+two:
+  ram: MyString
+  hdd: MyString
+  processor: MyString
+  os: MyString
+  screen: MyString
+  color: MyString
+  weight: MyString

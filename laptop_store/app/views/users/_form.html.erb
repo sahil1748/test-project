@@ -1,0 +1,16 @@
+<%=form_for @user do |user|%>
+  <%= user.label :name %>
+  <%= user.text_field :name %>
+  <%= user.label :username %>
+  <%= user.text_field :username %>
+  <%= user.label :password %>
+  <%= user.text_field :password %>
+  <%= user.label :confirm_password %>
+  <%= user.text_field :confirm_password %>
+  <%= user.label :email %>
+  <%= user.text_field :email %>
+  <%= user.label :mobile_number %>
+  <%= user.text_field :mobile_number %>
+  <%= user.label :address %>
+  <%= user.text_field :address %>
+<%end%>

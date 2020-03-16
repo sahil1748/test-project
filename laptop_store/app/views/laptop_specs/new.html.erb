@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laptop_specs</title>
+</head>
+<body>
+  <div>
+ <%=@laptop[:id]%>
+   	<%=form_for [@laptop,@spec] do |s|%>
+   	  <%s.label :id%><br>
+  	  <%s.text_field :id%><br>  
+  	  <%=s.label :laptop_id%><br>
+  	  <%=s.text_field :laptop_id,value:"#{@laptop[:id]}"%><br>  	
+  	  <%=s.label :ram%><br>
+  	  <%=s.text_field :ram%><br>
+  	  <%=s.label :hdd%><br>
+  	  <%=s.text_field :hdd%><br>
+  	  <%=s.label :processor%><br>
+  	  <%=s.text_field :processor%><br>
+  	  <%=s.submit%>
+  	<%end%>
+  </div>
+
+</body>
+</html>
+

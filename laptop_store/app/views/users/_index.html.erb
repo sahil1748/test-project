@@ -1,0 +1,28 @@
+<table>
+  <tr>
+
+    <th>
+      <%=  sortable "id" %>  
+    </th>
+     <th>
+       <%= sortable "name" %>
+     </th>
+     <th><%= sortable "username" %></th>
+     <th><%= sortable "email" %></th>
+     <th><%= sortable "phoneno" %></th>
+     <th><%= sortable "address" %></th>
+     <th>options</th>
+
+  </tr> 
+  <% @users.each do |u| %>
+    <tr class="user-row">
+      <td> <%= u.id %> </td> 
+      <td> <%= u.name %> </td>
+      <td> <%= u.username %> </td>
+      <td> <%= u.email %> </td>
+      <td> <%= u.phoneno %> </td>
+      <td> <%= u.address %> </td> 
+      <td> <%= link_to "show options", user_path(u) %> </td>
+    </tr>
+  <% end %>
+</table>

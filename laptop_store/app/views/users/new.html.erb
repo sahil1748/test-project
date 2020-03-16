@@ -1,0 +1,53 @@
+ <!--  <head>
+    <script src="https://kit.fontawesome.com/a076d05399.js">  </script>
+  </head> -->
+ <body class="body">
+  <!--%= render partial: "form" %--->
+   
+  <div class="form-div">
+
+    <div class="info-div">
+      Create Account
+    </div>
+
+    <form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post">
+    	<!---linput type="hidden" name="authenticity_token" value="lZ+iwaO+0PK6uG2STJ3kLCwvh6e9OwdDUKTaw9ObaJ+LNgqoKWmjmey+giEUHozQWwTFMVxixHxe4QHBjqgw7A==">
+      <abel class="label" for="user_id">Id</label>
+      <input class="input" type="text" name="user[id]" id="user_id"--->
+
+      <label class="label" for="user_name">*Name</label>
+      <input class="input" type="text" name="user[name]" id="user_name">
+
+      <label class="label" for="user_username">*Username</label> 
+      <input class="input" type="text" name="user[username]" id="user_username">
+
+      <label class="label" for="user_password">*Password</label> 
+      <input class="input" type="password" name="user[password]" id="user_password">
+      <!-- <div id="eye-icon"><i class="fas fa-eye-slash" style="font-size:13px;"></i></div> -->
+      <div id="vals">
+		  	<p id="m1">At least one uppercase</p>
+			  <p id="m2">At least one lowercase</p>
+			  <p id="m3">At least one digit</p>
+			  <p id="m5">Minimum 8 characters</p>
+	  	</div>
+
+  	  <label class="label" for="user_password_confirm">*Confirm password</label> 
+      <input class="input" type="password" name="user[password_confirmation]" id="user_password_confirm">
+      <div id="psw2-div"><p id="m4">password didn't match</p></div>
+
+      <label class="label" for="user_email">*Email</label> 
+      <input class="input" type="text" name="user[email]" id="user_email">
+      <div id="em-div"><p id="em">invalid email</p></div>
+
+      <label class="label" for="user_phoneno">*Mobile number</label> 
+      <input class="input" type="number" name="user[phoneno]" id="user_phoneno">
+      <div id="pm-div"><p id="pm">should be 10 digits</p></div>
+
+      <label  class="label" for="user_address">Address</label> 
+      <input class="input" type="text" name="user[address]" id="user_address">
+
+      <input class="submit_button" type="submit" name="commit" value="Sign Up" data-disable-with="Sign Up" id="submit-button">
+	</form>  
+ </div>
+
+</body>

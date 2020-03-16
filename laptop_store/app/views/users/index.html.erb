@@ -1,0 +1,41 @@
+
+<head>
+	<title></title>
+	<style type="text/css">
+		table,th,td {border: 1px solid grey;}
+		table {margin: auto; width: 50%;border-collapse: collapse;}
+		th,td {padding:10px; text-align: center; font-size: 20px;}
+		tr:nth-child(even) {background: #f2f2f2}
+		tr:hover {background: black; color:#fff;}
+		
+	</style>
+</head>
+<body>
+  <h1>index</h1>
+  
+  <div class="search-form">
+    <%= form_tag users_path, :method => 'get', :remote => true do %>
+      <%= label_tag :search %>
+      <%= text_field_tag :keyword, params[:keyword] %>
+      <%= submit_tag "search" %>
+    <% end %>
+  </div>
+  <div class="table-div">
+    <%= render "index" %>
+  </div>
+  
+  <div>
+  	<%=link_to "create new user",new_user_path%>
+  </div>
+
+  <div>
+    <%= link_to "Reset Search",users_path(:reset => 'true') %>
+  </div>
+  <div id="sd">click me</div>
+
+  <div style="height: 800px; border: 1px solid red">some text</div>
+
+
+
+</body>
+

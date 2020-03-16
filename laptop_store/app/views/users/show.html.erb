@@ -1,0 +1,25 @@
+<head>
+	<title>user</title>
+</head>
+<body>
+  <h1><%= @user.id %> <%= @user.name %></h1>
+  <div>
+    <h4>username: <%= @user.username %></h4>
+    <h4>phoneno: <%= @user.phoneno %></h4>
+    <h4>email: <%= @user.email %></h4>
+    <h4>address: <%= @user.address %></h4>
+	<br>
+	<%= link_to "edit",edit_user_path(@user) %>
+	<br>
+	<%= link_to "delete", user_path(@user), :data => {:confirm => "you sure?", :method => "delete"} %>
+	<br>
+	<%if (@user.is_deleted) %>
+	  <%= link_to "revert",user_soft_delete_path(@user)%>
+	<% else %>
+	  <%= link_to "soft delete",user_soft_delete_path(@user)%>
+	<% end %>
+
+	
+
+  </div>
+</body>

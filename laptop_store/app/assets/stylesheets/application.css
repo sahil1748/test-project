@@ -1,0 +1,125 @@
+
+.info-div {
+
+	width: 94%;
+	border-radius: 10px;
+	font-weight: bold;
+	color: #305972;
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+
+.body {
+		background: #fff
+		}
+
+.form-div {	width: 30%; 
+		border: 5px solid #305972;
+		border-radius: 10px;
+		background: #fafafa; 
+		font-weight: bold;
+		padding: 30px;
+		margin: auto;
+
+	}
+
+
+.input {
+
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #b0cfe0;
+	display: block;
+	width: 94%;
+	margin: 5px 0 12px;
+}
+
+/*#user_password {
+	display: inline-block;
+	width: 89%;
+	margin-right: 0;
+	border-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+*/
+/*#eye-icon {
+	border-radius: 0px 5px 5px 0;
+	display: inline-block;
+	width: 4%;
+	border: 1px solid #b0cfe0;
+	border-left: 0px;
+	margin:0px;
+	padding: 6.5px 0;
+}*/
+
+input:focus {
+
+	outline: none; 
+}
+
+.input-error {
+
+	border: 1px solid red;
+}
+
+.input-focus {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.label {
+	color: #305972;
+
+}
+
+p {
+	color:red;
+	font-weight: normal;
+	
+	}
+		
+#vals,#psw2-div,#em-div,#pm-div {
+					display: none;
+					}
+
+.submit_button {
+	display: block;
+	background: dodgerblue;
+	border-radius: 5px;
+	color: white;
+	padding: 10px 40px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 15px auto 0px;
+	border: 2px solid dodgerblue;
+
+}
+
+.submit_button:hover{
+	cursor: pointer;
+	color: dodgerblue;
+	background: white;
+
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ 		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+ */

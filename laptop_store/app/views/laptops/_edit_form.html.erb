@@ -1,0 +1,19 @@
+
+<head>
+	<title>Laptop</title>
+</head>
+<body>
+  <div>
+  	<h3><%=@laptop.brand%> <%=@laptop.name%></h3>
+  </div>
+  <div>
+  	<%=form_for @laptop do |l|%>
+  	  <%=l.label :price%><br>
+  	  <%=l.text_field :price%><br>
+  	  <%=l.label :quantity%><br>
+  	  <%=l.text_field :quantity%>
+  	  <%=l.submit%>
+  	<%end%>
+  </div>
+
+</body>

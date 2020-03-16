@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>all laptops</title>
+
+</head>
+<body>
+  <% if logged_in? %>	
+  <h1>Hello <%= current_user.name %></h1>	
+  <% end %>
+
+  <div class="d1">
+	<%for i in 0...@laptops.length%>
+	  <ul>
+	  	<li>
+	      <%=link_to "#{@laptops[i].brand} #{@laptops[i].name}",laptop_path(@laptops[i])%>  
+	      <%if @specs[i] == nil%>
+	      <%=link_to "Add Specs", new_laptop_laptop_spec_path(@laptops[i])%>
+	      <%end%>
+      	</li>
+      </ul>
+	<%end%>
+
+    <div><%=link_to "add new laptop", new_laptop_path%></div>
+  </div>
+  <div><%= link_to "log in", user_login_path %></div>
+  <div><%= link_to "log out", user_logout_path %></div>
+  <div>
+    <%= link_to "cart", user_cart_path %>
+  </div>
+  <div>
+    <%= link_to "orders", orders_path %>
+  </div>
+</body>
+</html>

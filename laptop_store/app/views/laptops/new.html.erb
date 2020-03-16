@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laptop</title>
+</head>
+<body>
+  <div>
+  	<%=form_for @laptop do |l|%>
+  	  <%l.label :id%><br>
+  	  <%l.text_field :id%><br>
+  	  <%=l.label :brand%><br>
+  	  <%=l.text_field :brand%><br>
+  	  <%=l.label :name%><br>
+  	  <%=l.text_field :name%><br>
+  	  <%=l.label :price%><br>
+  	  <%=l.text_field :price%><br>
+  	  <%=l.label :quantity%><br>
+  	  <%=l.text_field :quantity%><br>
+  	  <%=l.submit%>
+  	<%end%>
+  </div>
+
+</body>
+</html>

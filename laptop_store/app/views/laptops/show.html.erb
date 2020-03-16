@@ -1,0 +1,59 @@
+
+<head>
+  <title><%=@laptop.name%></title>
+</head>
+<body>
+
+  <table>
+  	<tr>
+  	  <th>ID</th>
+  	  <th>BRAND</th>
+  	  <th>NAME</th>
+  	  <th>PRICE</th>
+  	  <th>QUANTITY</th>
+  	</tr>
+  	<tr>
+  	  <td id="laptop_id"><%=@laptop.id%></td>
+  	  <td><%=@laptop.brand%></td>
+  	  <td><%=@laptop.name%></td>
+  	  <td><%=@laptop.price%></td>
+  	  <td><%=@laptop.quantity%></td>
+  	</tr>
+  </table>
+  <div>
+    <%if @spec%>
+  	  <h4>ram: <%=@spec.ram%></h4>
+  	  <h4>hardisk: <%=@spec.hdd%></h4>
+  	  <h4>processor: <%=@spec.processor%></h4>
+  	  <div>
+  	    <%=link_to "Edit Specs",edit_laptop_laptop_spec_path(@laptop,@spec)%>
+  	  </div>
+    <%end%>
+  </div>
+  <div id="edit_form">
+  	<%=link_to "Edit",edit_laptop_path(@laptop), remote: true %>
+  </div>  
+  <div>
+    <%=link_to "Delete",laptop_path(@laptop),:data => {:confirm => "Delete this laptop?",:method => "delete"}%> 
+  </div>  
+  <div id="add-item">
+    Add to cart
+  </div>  
+
+  <script type="text/javascript">
+  	 var laptopID = document.querySelector('#laptop_id').innerText
+  	 // let laptopID = lID
+  	 console.log('/laptops/'+laptopID) 
+  	$('#add-item').click(()=>{
+
+  	  $.ajax({
+  	    url: '/laptops/'+laptopID,
+  	    type: 'post',
+  	    dataType: 'script',	
+  	  })	
+
+  	})
+  	
+  </script>
+</body>
+
